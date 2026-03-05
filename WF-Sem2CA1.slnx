@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="WF-Sem2CA1/WF-Sem2CA1.csproj" />
+  <Project Path="WF-Sem2CA1Tests/WF-Sem2CA1Tests.csproj" Id="bc6cc503-377e-4ce8-8d79-d3b0c6f7677b" />
 </Solution>
