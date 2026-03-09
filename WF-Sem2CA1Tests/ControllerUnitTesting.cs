@@ -50,6 +50,13 @@ namespace WF_Sem2CA1Tests
 				.Options;
 
 			using var DbContext = new StudyContext(tempDB);
+
+			DbContext.Departments.Add(new Department { DeptId = "CompSciMath", DeptTitle = "Comp Science and Maths" });
+			await DbContext.SaveChangesAsync();
+
+			DbContext.Modules.Add(new Module { ModuleId = "WF67", DeptId = "CompSciMath", ModuleTitle = "Web Frameworks", ModuleDescription = ""});
+			await DbContext.SaveChangesAsync();
+
 			var TestController = new StudyHelpController(DbContext);
 
 			var CreateDTO = new StudyHelpCreateDTO { ModuleId = "WF67", IssueDescription = "Unit Testing" };
